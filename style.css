@@ -1,7 +1,9 @@
 html,body {
     height: 100%;
+    background-color: rgb(23, 131, 194);
     
 }
+
 
 .calculator.container {
     height: 100%;
@@ -41,4 +43,75 @@ html,body {
     border: solid rgba(187, 187, 187, 0.541) 2px;
     border-radius: 4em;
     background-color: #273527;
+}
+.calculator_display {
+    height: 150px;
+    width: 100%;
+}
+.buttons_numbers{ 
+    padding-left: 15px;
+}
+.numbers {
+    background-color: rgb(78, 78, 78);
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 2em;
+    padding: 0%;
+    color:white;
+    width: 45px;
+    height: 45px;
+    border-style: none;
+    margin: 2px;
+    margin-bottom: 15px;
+
+}
+.zero {
+    width: 100px;
+    text-align: left;
+    padding: 10px;
+}
+
+.buttons_operators {
+    width: 50px;
+    padding-right: 15px;
+
+    
+}
+.buttons_operators button {
+    background-color: orange;
+    text-decoration: none;
+    border-radius: 2em;
+    border-style: none;
+    padding: 0%;
+    color:white;
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.buttons.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.buttons_clear_equals button {
+    background-color: orange;
+    text-decoration: none;
+    border-radius: 2em;
+    border-style: none;
+    padding: 0%;
+    color:white;
+    width: 102px;
+    height: 40px;
+    margin: 2px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    
+}
+.buttons_clear_equals {
+
+    padding-left: 15px;
 }
