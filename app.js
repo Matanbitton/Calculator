@@ -107,7 +107,7 @@ operators.forEach((button) => {
         userOperators.push(userOperatorInput);
         userNumberString = '';
         finalString += ` ${userOperatorInput} `;
-        numsToCalculateArr.push(Number(userNumberInput));
+        numsToCalculateArr.push(Number(userNumberInput.toFixed(2)));
 
         userCalculationProcess.textContent = finalString;
 
@@ -121,7 +121,7 @@ operators.forEach((button) => {
 const equalsSign = document.querySelector('.equals')
 
 equalsSign.addEventListener('click', ()=> {
-    numsToCalculateArr.push(Number(userNumberInput));
+    numsToCalculateArr.push(Number(userNumberInput.toFixed(2)));
   
     if(numsToCalculateArr.length == 1 ) {
         calculatorDisplay.innerText = "Missing Numbers For Calculation";
@@ -150,6 +150,8 @@ clearScreen.addEventListener('click', ()=> {
     userOperatorInput = '';         
     userNumberInput = 0;
     numsToCalculateArr = [];
+    numbersCounter = 0;
+    StringCounter = 0;
 
 })
 
