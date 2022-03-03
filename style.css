@@ -140,3 +140,9 @@ html,body {
     padding-right: 2px;
 
 }
+
+
+button:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4) 0 0);
+    
+}
