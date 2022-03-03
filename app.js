@@ -2,8 +2,6 @@ let userNumberInput = '';
 let userNumberString = '';
 let finalString ='';
 let totalSum ;
-let numbersCounter = 0;
-let StringCounter = 0;
 
 let add = function (a,b) {
     
@@ -28,14 +26,18 @@ let divide = function (a,b) {
 let operate = function(operator,num1,num2) {
     if (operator == '+'){
         totalSum = Number(add(num1,num2));
+        userNumberInput = '';
+        calculatorDisplay.textContent = totalSum;
+       
+
         numsToCalculateArr.pop();
         numsToCalculateArr.pop();
         numsToCalculateArr.push(totalSum); 
         userOperators.shift()
-        calculatorDisplay.textContent = totalSum;
     }
     if (operator == 'x'){
-        
+        userNumberInput = '';
+
         totalSum = Number(multiply(num1,num2));
         numsToCalculateArr.pop();
         numsToCalculateArr.pop();
@@ -47,29 +49,30 @@ let operate = function(operator,num1,num2) {
     if (operator == '÷'){
         if (num2 == "0") {
             userCalculationProcess.textContent = '';
-            calculatorDisplay.style.fontsize = "20px";
             calculatorDisplay.textContent = "Division by Zero";
         } else {
+            userNumberInput = '';
             totalSum = Number(divide(num1,num2));
             numsToCalculateArr.pop();
             numsToCalculateArr.pop();
-            numsToCalculateArr.push(totalSum);
+            totalSum = totalSum.toFixed(2);
+            numsToCalculateArr.push(Number(totalSum));
             userOperators.shift()
-
             calculatorDisplay.textContent = totalSum;
+            console.log(numsToCalculateArr);
+
         }
     }
           
     if (operator == '-'){
+        userNumberInput = '';
         totalSum = Number(subtract(num1,num2));
         numsToCalculateArr.pop();
         numsToCalculateArr.pop();
         numsToCalculateArr.push(totalSum);
         userOperators.shift()
-
         calculatorDisplay.textContent = totalSum;
-    }
-    
+    }    
 }
 
 const userCalculationProcess = document.querySelector('.calculator-display-process');
@@ -89,8 +92,6 @@ numbers.forEach((button) => {
         finalString += `${button.innerText}`;
         userCalculationProcess.textContent = `${finalString}`;
 
-
-
     });
 });
 let numsToCalculateArr = [];
@@ -107,12 +108,14 @@ operators.forEach((button) => {
         userOperators.push(userOperatorInput);
         userNumberString = '';
         finalString += ` ${userOperatorInput} `;
-        numsToCalculateArr.push(Number(userNumberInput.toFixed(2)));
+        if (userNumberInput != '') {
+            numsToCalculateArr.push(Number(userNumberInput));
+
+        }
 
         userCalculationProcess.textContent = finalString;
 
-        numbersCounter++;
-        if (numbersCounter >= 2) {
+        if (numsToCalculateArr.length == 2) {
             calculation();
         }
     });
@@ -121,21 +124,22 @@ operators.forEach((button) => {
 const equalsSign = document.querySelector('.equals')
 
 equalsSign.addEventListener('click', ()=> {
-    numsToCalculateArr.push(Number(userNumberInput.toFixed(2)));
-  
+    numsToCalculateArr.push(Number(userNumberInput));
     if(numsToCalculateArr.length == 1 ) {
         calculatorDisplay.innerText = "Missing Numbers For Calculation";
+        console.log("in Missing Numbers For Calculation")
+ 
     }
     if (numsToCalculateArr.length >= 2 && !endWithOperator()){
-        console.log("in")
+        console.log(userOperators[0]);
         calculation();
     }
-    
 
 });
 
 
 function calculation() {
+    console.log(numsToCalculateArr);
       operate(userOperators[0],numsToCalculateArr[0],numsToCalculateArr[1]);
 }
  
