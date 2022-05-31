@@ -1,148 +1,135 @@
-html,body {
-    height: 100%;
-    background-image: linear-gradient( 109.6deg,  rgb(255, 135, 55) 11.2%, rgb(71, 0, 85) 92.5% );
+html,
+body {
+  height: 100%;
+  background-image: url("/home/matanbitton/repos/Calculator/Vecteezy_Black_Background_AA1220.jpg");
 }
 .calculator.container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.calculator.UI { 
-    border: solid rgba(187, 187, 187, 0.541) 5px;
-    border-radius: 2em 2em;
-    height: 500px;
-    width: 250px;
-    background-color:	#2c2f33;
-    box-shadow:  5px 8px 5px #1a1818 ;
-   
+.calculator.UI {
+  border: solid rgba(187, 187, 187, 0.541) 5px;
+  border-radius: 2em 2em;
+  height: 500px;
+  width: 250px;
+  background-color: #2c2f33;
+  box-shadow: 5px 8px 5px #1a1818;
 }
 .calculator-display-process {
-    display: flex;
-    justify-content: right;
-    height: 20px;
-    font-size: 20px;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
+  display: flex;
+  justify-content: right;
+  height: 20px;
+  font-size: 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 .phone {
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    align-items: center;
-    padding-left: 10px;
-    
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  align-items: center;
+  padding-left: 10px;
 }
 
 .phone_speaker {
-    width: 50px;
-    height: 2px;
-    border: solid rgba(187, 187, 187, 0.541) 2px;
-    background-color: #273527;
-
+  width: 50px;
+  height: 2px;
+  border: solid rgba(187, 187, 187, 0.541) 2px;
+  background-color: #273527;
 }
 .phone_camera {
-    padding: 1px;
-    width: 5px;
-    height: 5px;
-    border: solid rgba(187, 187, 187, 0.541) 2px;
-    border-radius: 4em;
-    background-color: #273527;
+  padding: 1px;
+  width: 5px;
+  height: 5px;
+  border: solid rgba(187, 187, 187, 0.541) 2px;
+  border-radius: 4em;
+  background-color: #273527;
 }
 .calculator-display-container {
-    padding-bottom: 10px;
-    padding-right: 22px;
-
+  padding-bottom: 10px;
+  padding-right: 22px;
 }
 .calculator-display-userInput {
-    display: flex;
-    justify-content:end;
-    align-items: flex-end;
-    height: 120px;
-    width: 100%;
-    font-size: 40px;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  height: 120px;
+  width: 100%;
+  font-size: 40px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.buttons_numbers{ 
-    padding-left: 18px;
-    padding-right: 0px;
+.buttons_numbers {
+  padding-left: 18px;
+  padding-right: 0px;
 }
 .numbers {
-    background-color: rgb(78, 78, 78);
-    text-decoration: none;
-    font-size: 25px;
-    border-radius: 2em;
-    padding: 0%;
-    color:white;
-    width: 45px;
-    height: 45px;
-    border-style: none;
-    margin: 2px;
-    margin-bottom: 15px;
-    
+  background-color: rgb(78, 78, 78);
+  text-decoration: none;
+  font-size: 25px;
+  border-radius: 2em;
+  padding: 0%;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-style: none;
+  margin: 2px;
+  margin-bottom: 15px;
 }
 .zero {
-    
-    width: 98px;
-    text-align: left;
-    padding: 5px 15px ;
-   
-    
+  width: 98px;
+  text-align: left;
+  padding: 5px 15px;
 }
 .buttons_operators {
-    width: 50px;
-    padding-right: 20px;
-
-    
+  width: 50px;
+  padding-right: 20px;
 }
 .buttons_operators button {
-    background-color: orange;
-    text-decoration: none;
-    border-radius: 2em;
-    border-style: none;
-    padding: 0%;
-    color:white;
-    width: 45px;
-    height: 45px;
-    margin: 2px;
-    margin-bottom: 15px;
-    font-size: 30px;
+  background-color: orange;
+  text-decoration: none;
+  border-radius: 2em;
+  border-style: none;
+  padding: 0%;
+  color: white;
+  width: 45px;
+  height: 45px;
+  margin: 2px;
+  margin-bottom: 15px;
+  font-size: 30px;
 }
 .buttons.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 .buttons_clear_equals button {
-    background-color: orange;
-    text-decoration: none;
-    border-radius: 2em;
-    border-style: none;
-    padding: 0%;
-    color:white;
-    width: 100px;
-    height: 40px;
-    margin: 2px;
-    margin-bottom: 15px;
-    font-size: 30px;
-    
+  background-color: orange;
+  text-decoration: none;
+  border-radius: 2em;
+  border-style: none;
+  padding: 0%;
+  color: white;
+  width: 100px;
+  height: 40px;
+  margin: 2px;
+  margin-bottom: 15px;
+  font-size: 30px;
 }
 .buttons_clear_equals {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    padding-right: 2px;
-
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-right: 2px;
 }
 
-
 button:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4) 0 0);
-    
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4) 0 0);
 }
