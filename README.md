@@ -1,5 +1,5 @@
 # Calculator
-- 👨‍💻 See the live version of this project at **[Calculator](https://matanbitton.github.io/Calculator/)**
+- 👨‍💻 See the live version of this project at **[Calculator](https://matanbitton.github.io/Calculator/)** (Not Optimized For Mobile Yet)
 
 ## About The Project
 
